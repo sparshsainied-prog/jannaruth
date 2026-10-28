@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en-NZ">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Janna Ruth | Spirit Seeker</title>
+<meta name="description" content="Spirit Seeker by Janna Ruth: Rika, the nature spirits of Europe and the storm king, with a deluxe illustrated hardcover coming to Kickstarter.">
+<meta property="og:title" content="A homepage for Janna Ruth, made by Sparsh Saini">
+<meta property="og:description" content="A homepage idea for Janna Ruth and the Spirit Seeker books, made by Sparsh Saini. Not the official site.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/jannaruth/img/og.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%231c1433'/><path d='M16 4C17 13 19 15 28 16 19 17 17 19 16 28 15 19 13 17 4 16 13 15 15 13 16 4Z' fill='%23e3e6f0'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+/* Colours from A Force of Nature: the storm's violet, the night over Berlin, the silver of the
+   title, Rika's teal hair, and the amber glow of the city under the clouds. */
+:root {
+  --night: #120d24;
+  --storm: #22183f;
+  --violet: #8c6fd6;
+  --silver: #e3e6f0;
+  --silver-2: #aeb2c6;
+  --teal: #37c3bf;
+  --amber: #f0b44e;
+  --display: "Cinzel", "Trajan Pro", Georgia, serif;
+  --text: "Crimson Pro", Georgia, serif;
+  --gutter: clamp(1rem, 5vw, 4rem);
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--night); color: var(--silver); font-family: var(--text); font-size: 1.24rem; line-height: 1.55; overflow-x: hidden; }
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; }
+.wrap { max-width: 70rem; margin: 0 auto; padding: 0 var(--gutter); }
+h1, h2, h3 { font-family: var(--display); font-weight: 400; margin: 0; line-height: 1.08; letter-spacing: .04em; }
+p { margin: 0 0 1rem; }
+:focus-visible { outline: 2px solid var(--teal); outline-offset: 3px; }
+.star { display: inline-block; width: .7em; height: .7em; vertical-align: .02em; }
+.star svg { width: 100%; height: 100%; display: block; }
+
+/* Buttons in the cover's hand: spaced silver capitals on a thin rule, a four-point star like the one in the title's O */
+.btn { display: inline-flex; align-items: center; gap: .6rem; padding: .7rem 1.3rem .6rem; font-family: var(--display); font-size: .98rem; letter-spacing: .12em; text-transform: uppercase; text-decoration: none; color: var(--silver); border: 1px solid var(--silver-2); background: rgba(18, 13, 36, .5); }
+.btn:hover, .btn:focus-visible { background: var(--silver); color: var(--night); }
+.btn.ks { border-color: var(--teal); color: var(--teal); }
+.btn.ks:hover, .btn.ks:focus-visible { background: var(--teal); color: var(--night); }
+.quiet { font-style: italic; text-underline-offset: .25em; text-decoration-thickness: 1px; }
+.quiet:hover, .quiet:focus-visible { color: var(--teal); }
+.buy { display: flex; flex-wrap: wrap; gap: .9rem 1.3rem; align-items: center; }
+
+.top { position: absolute; z-index: 30; top: 0; left: 0; right: 0; }
+.made { margin: 0; padding: .45rem var(--gutter); background: #0a0716; color: var(--silver-2); font-size: .98rem; line-height: 1.35; text-align: center; }
+
+/* A ticket, because the series is a sightseeing trip through Europe. It docks to the top once you are past the cover. */
+.ticket { position: fixed; z-index: 40; top: .6rem; left: 50%; display: flex; align-items: stretch; transform: translate(-50%, -160%); opacity: 0; transition: transform .35s ease, opacity .35s ease; background: var(--silver); color: var(--night); font-family: var(--display); font-size: .82rem; letter-spacing: .1em; text-transform: uppercase; box-shadow: 0 .5rem 1.4rem rgba(0, 0, 0, .45); }
+.ticket.on { transform: translate(-50%, 0); opacity: 1; }
+.ticket .stub { padding: .55rem .9rem .45rem; border-right: 2px dashed rgba(18, 13, 36, .45); white-space: nowrap; }
+.ticket a { padding: .55rem .75rem .45rem; text-decoration: none; white-space: nowrap; }
+.ticket a:hover, .ticket a:focus-visible { background: var(--night); color: var(--silver); }
+
+/* Hero: the cover of A Force of Nature in six planes. We start up in the storm over Berlin with
+   Rika close to us; scrolling brings us down to the rooftop as she steps back into place, and the
+   wind blows the title in, word by word, from the right. */
+.hero { position: relative; height: 100svh; min-height: 38rem; }
+.js .hero { height: 330svh; }
+.stage { position: sticky; top: 0; height: 100svh; min-height: 38rem; overflow: hidden; background: radial-gradient(ellipse 70% 60% at 50% 40%, #2c1f52, var(--night) 75%); }
+.inside { position: absolute; inset: 6.5rem var(--gutter) 2.5rem; display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: clamp(1.5rem, 4vw, 4rem); }
+.slot { height: min(72svh, 42rem); aspect-ratio: 1707 / 2560; }
+.cover { position: absolute; z-index: 2; left: 0; top: 0; transform-origin: 0 0; will-change: transform; overflow: hidden; box-shadow: 0 1.6rem 3.4rem rgba(5, 3, 12, .7); }
+.cover img { position: absolute; max-width: none; }
+.plate { left: 0; top: 0; width: 100%; height: 100%; }
+.rika { left: 9.080%; top: 15.664%; width: 75.923%; height: 65.312%; transform-origin: 52% 100%; will-change: transform; }
+.w { will-change: transform, opacity; }
+.w-a { left: 46.104%; top: 55.898%; width: 7.674%; height: 4.609%; }
+.w-force { left: 12.127%; top: 60.078%; width: 76.626%; height: 12.852%; }
+.w-of { left: 42.765%; top: 73.828%; width: 14.353%; height: 5.039%; }
+.w-nature { left: 3.925%; top: 80.273%; width: 92.091%; height: 9.805%; }
+.js .w { opacity: 0; }
+.side { position: relative; z-index: 3; will-change: transform, opacity; }
+.js .side { opacity: 0; }
+.side h1 { font-size: clamp(2.2rem, 3.6vw, 3.3rem); }
+.side .series { font-family: var(--display); letter-spacing: .18em; text-transform: uppercase; color: var(--silver-2); font-size: .95rem; margin: .9rem 0 1.1rem; }
+.side.right { justify-self: start; max-width: 19rem; }
+.side.left { justify-self: end; max-width: 23rem; }
+.kicker { font-family: var(--display); letter-spacing: .14em; text-transform: uppercase; color: var(--teal); font-size: .9rem; margin-bottom: .5rem; }
+.open { position: absolute; z-index: 4; left: var(--gutter); right: var(--gutter); bottom: 9svh; max-width: 40rem; will-change: transform, opacity; }
+.open .line { margin: 0; font-family: var(--display); font-size: clamp(1.9rem, 4.4vw, 3.4rem); line-height: 1.12; text-wrap: balance; text-shadow: 0 2px 22px rgba(10, 6, 22, .95); }
+.open .from { margin: .9rem 0 0; font-style: italic; color: var(--silver-2); text-shadow: 0 1px 10px rgba(10, 6, 22, .95); }
+.low { position: absolute; z-index: 3; inset: 0; pointer-events: none; background: linear-gradient(transparent 45%, rgba(18, 13, 36, .88)); will-change: opacity; }
+html:not(.js) .cover, html:not(.js) .open, html:not(.js) .low { display: none; }
+html:not(.js) .slot { background: url(img/force.jpg) center / cover; }
+.still .hero { height: 100svh; }
+.still .open, .still .low { display: none; }
+.still .side, .still .w { opacity: 1; }
+
+/* Calm sections */
+.band { padding: clamp(4.5rem, 10vw, 8rem) 0; }
+h2 { font-size: clamp(2.1rem, 4.4vw, 3.4rem); margin-bottom: 1.2rem; text-wrap: balance; }
+.lead { font-size: clamp(1.35rem, 2.2vw, 1.6rem); line-height: 1.42; max-width: 42rem; }
+
+.ks { background: linear-gradient(160deg, #1d3a44, var(--storm) 55%); }
+.ks .grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: clamp(2.5rem, 6vw, 5rem); align-items: start; }
+.spec { list-style: none; padding: 0; margin: 1.4rem 0 2rem; }
+.spec li { display: grid; grid-template-columns: 1.4rem minmax(0, 1fr); gap: .6rem; padding: .55rem 0; border-bottom: 1px solid rgba(227, 230, 240, .18); }
+.spec .star { color: var(--teal); margin-top: .35rem; }
+.trio { margin-top: 2.2rem; display: grid; gap: 1.2rem; }
+.trio p { margin: 0; }
+.trio b { font-family: var(--display); font-weight: 400; letter-spacing: .06em; color: var(--teal); display: block; font-size: 1.1rem; }
+
+.series-band { background: var(--night); }
+.series-band .grid { display: grid; grid-template-columns: minmax(0, 16rem) minmax(0, 1fr); gap: clamp(2rem, 5vw, 4.5rem); align-items: start; }
+.series-band img { box-shadow: 0 1.2rem 2.4rem rgba(0, 0, 0, .6); }
+.route { list-style: none; padding: 0; margin: 1.6rem 0 1.8rem; counter-reset: stop; }
+.route li { position: relative; padding: .6rem 0 .6rem 2.4rem; border-left: 1px dashed var(--silver-2); margin-left: .5rem; }
+.route li::before { content: ""; position: absolute; left: -.42rem; top: 1rem; width: .75rem; height: .75rem; border-radius: 50%; background: var(--night); border: 2px solid var(--teal); }
+.route li:first-child::before { background: var(--teal); }
+.route b { font-family: var(--display); font-weight: 400; letter-spacing: .05em; }
+
+.europe { background: var(--storm); }
+.places { list-style: none; padding: 0; margin: 2.4rem 0 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2.4rem clamp(2rem, 5vw, 4rem); }
+.places li { display: grid; grid-template-columns: 7rem minmax(0, 1fr); gap: 1.2rem; align-items: start; }
+.places img { box-shadow: 0 .8rem 1.6rem rgba(0, 0, 0, .5); }
+.places h3 { font-size: 1.35rem; margin-bottom: .3rem; }
+.places .where { font-family: var(--display); font-size: .82rem; letter-spacing: .14em; text-transform: uppercase; color: var(--amber); margin-bottom: .4rem; }
+.places p { font-size: 1.1rem; }
+
+.about { background: var(--night); }
+.about .grid { display: grid; grid-template-columns: minmax(0, 15rem) minmax(0, 38rem); gap: clamp(2rem, 5vw, 4.5rem); align-items: start; }
+.about img { box-shadow: 0 1rem 2rem rgba(0, 0, 0, .45); }
+.awards { list-style: none; padding: 0; margin: 1.6rem 0 0; border-top: 1px solid rgba(227, 230, 240, .25); }
+.awards li { padding: .55rem 0; border-bottom: 1px solid rgba(227, 230, 240, .18); font-size: 1.1rem; }
+.awards b { font-family: var(--display); font-weight: 400; letter-spacing: .08em; color: var(--amber); font-size: .9rem; margin-right: .5rem; }
+.signed { margin-top: 2.6rem; padding: 1.5rem 1.6rem 1.1rem; border: 1px solid var(--silver-2); }
+.signed h3 { font-size: 1.35rem; margin-bottom: .6rem; }
+
+footer { padding: 2.2rem 0 2.6rem; background: #0a0716; color: var(--silver-2); font-size: 1.02rem; }
+footer .wrap { display: flex; flex-wrap: wrap; gap: .8rem 2rem; justify-content: space-between; }
+footer p { margin: 0; }
+
+@media (max-width: 860px) {
+  body { font-size: 1.14rem; }
+  .inside { inset: 5.8rem 1.2rem 1.4rem; grid-template-columns: minmax(0, 1fr); grid-template-rows: auto auto; justify-items: center; align-content: center; gap: 1.1rem; text-align: center; }
+  .slot { height: min(44svh, 23rem); grid-row: 1; }
+  .side.left { grid-row: 2; justify-self: center; }
+  .side.left .series { margin: .4rem 0 .8rem; font-size: .82rem; }
+  .side.left h1 { font-size: 2rem; }
+  .side.left .buy { justify-content: center; }
+  .side.right { display: none; }
+  .open { bottom: 7svh; }
+  .ks .grid, .series-band .grid, .about .grid { grid-template-columns: minmax(0, 1fr); }
+  .series-band img { max-width: 13rem; }
+  .places { grid-template-columns: minmax(0, 1fr); }
+  .places li { grid-template-columns: 6rem minmax(0, 1fr); }
+  .about img { max-width: 12rem; }
+  .ticket { font-size: .7rem; letter-spacing: .06em; }
+  .ticket .stub { display: none; }
+  .ticket a { padding: .5rem .55rem .4rem; }
+}
+@media (prefers-reduced-motion: reduce) { .ticket { transition: none; } }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="star" viewBox="0 0 32 32"><path d="M16 1C17 12 20 15 31 16 20 17 17 20 16 31 15 20 12 17 1 16 12 15 15 12 16 1Z" fill="currentColor"/></symbol>
+</svg>
+<div class="top">
+  <p class="made">A homepage idea made by Sparsh Saini for Janna Ruth. Not their official site.</p>
+</div>
+
+<nav class="ticket" aria-label="Main">
+  <span class="stub">Janna Ruth</span>
+  <a href="#kickstarter">Kickstarter</a>
+  <a href="#spirit-seeker">Spirit Seeker</a>
+  <a href="#europe">Europe</a>
+  <a href="#janna">Janna</a>
+</nav>
+
+<main>
+<section class="hero" aria-label="A Force of Nature">
+  <div class="stage">
+    <div class="inside">
+      <div class="side left">
+        <h1>A Force of Nature</h1>
+        <p class="series">Spirit Seeker · Book 1</p>
+        <p>Rika can see nature spirits. That’s the trouble.</p>
+        <div class="buy">
+          <a class="btn" href="https://janna-ruth.myshopify.com/products/a-force-of-nature"><span class="star"><svg><use href="#star"/></svg></span>Get book 1</a>
+          <a class="quiet" href="#spirit-seeker">The whole series</a>
+        </div>
+      </div>
+      <div class="slot" aria-hidden="true"></div>
+      <div class="side right">
+        <p class="kicker">Coming to Kickstarter</p>
+        <p>All five Spirit Seeker books in one silver-foiled hardcover, with ten or more illustrations I drew myself.</p>
+        <a class="btn ks" href="https://www.kickstarter.com/projects/janna-ruth/spirit-seeker-illustrated-urban-fantasy-deluxe-hardcover">Notify me</a>
+      </div>
+    </div>
+    <div class="cover" role="img" aria-label="A Force of Nature cover: Rika with teal hair in a silver jacket on a rooftop in Berlin, the TV tower behind her, a violet storm and lightning overhead">
+      <img class="plate" src="img/f-plate.jpg" alt="" width="1707" height="2560" fetchpriority="high">
+      <img class="rika" src="img/f-rika.webp" alt="" width="1296" height="1672" fetchpriority="high">
+      <img class="w w-a" src="img/f-a.webp" alt="" width="131" height="118">
+      <img class="w w-force" src="img/f-force.webp" alt="" width="1308" height="329">
+      <img class="w w-of" src="img/f-of.webp" alt="" width="245" height="129">
+      <img class="w w-nature" src="img/f-nature.webp" alt="" width="1572" height="251">
+    </div>
+    <div class="low"></div>
+    <div class="open">
+      <p class="line">I’ve trusted nature spirits with my life, until the storm king decided I had to die.</p>
+      <p class="from">A Force of Nature, Spirit Seeker book one</p>
+    </div>
+  </div>
+</section>
+
+<section class="band ks" id="kickstarter">
+  <div class="wrap grid">
+    <div>
+      <p class="kicker">Five years of the Spirit Seekers</p>
+      <h2>The illustrated deluxe hardcover</h2>
+      <p class="lead">The Spirit Seekers were my first urban fantasy series in English. This year is their fifth anniversary, so what better way to celebrate than a fancy hardcover omnibus and a bucket load of illustrations, drawn by me.</p>
+      <ul class="spec">
+        <li><span class="star"><svg><use href="#star"/></svg></span><span>All five main books in one omnibus, about 1,100 pages</span></li>
+        <li><span class="star"><svg><use href="#star"/></svg></span><span>Silver-foiled cover, sprayed edges, printed endpapers</span></li>
+        <li><span class="star"><svg><use href="#star"/></svg></span><span>At least ten scene illustrations and five chapter illustrations, by me</span></li>
+        <li><span class="star"><svg><use href="#star"/></svg></span><span>A green ribbon to mark your place</span></li>
+        <li><span class="star"><svg><use href="#star"/></svg></span><span>An ebook omnibus with every illustration, too</span></li>
+      </ul>
+      <div class="buy">
+        <a class="btn ks" href="https://www.kickstarter.com/projects/janna-ruth/spirit-seeker-illustrated-urban-fantasy-deluxe-hardcover"><span class="star"><svg><use href="#star"/></svg></span>Notify me on launch</a>
+        <span class="quiet" style="text-decoration:none">Launching in November</span>
+      </div>
+    </div>
+    <div class="trio">
+      <p><b>Rika</b>Homeless in Berlin for eight years, she gets along better with spirits than with people. A warm salamander in winter, a thorny dryad guarding her sleeping spot.</p>
+      <p><b>Wulf Bachmann</b>The Spirit Seekers’ most celebrated commander. Even the spirits whisper his name in the winds.</p>
+      <p><b>Aeola</b>The sylph Rika pulled out of an icy river. A smell addict: coffee, pizza, flowers. The heart of the whole series.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band series-band" id="spirit-seeker">
+  <div class="wrap grid">
+    <img src="img/force.jpg" alt="A Force of Nature, Spirit Seeker book 1, by Janna Ruth" width="520" height="780" loading="lazy">
+    <div>
+      <h2>Spirit Seeker</h2>
+      <p class="lead">Elemental magic meets climate fiction: a Europe where every flood, storm and landslide is caused by nature spirits, and a war between spirits and humans.</p>
+      <p>Each book takes you somewhere new, so buckle up and book your tickets.</p>
+      <ol class="route">
+        <li><b>A Force of Nature</b>, book 1</li>
+        <li><b>Natural Enemies</b>, book 2</li>
+        <li><b>Back to Nature</b>, book 3</li>
+        <li><b>Against Human Nature</b>, book 4</li>
+        <li><b>Natural Disaster</b>, book 5</li>
+      </ol>
+      <div class="buy">
+        <a class="btn" href="https://janna-ruth.myshopify.com/collections/spirit-seekers">All five, save 40%</a>
+        <a class="quiet" href="https://janna-ruth.myshopify.com/products/a-force-of-nature">Start with book 1</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band europe" id="europe">
+  <div class="wrap">
+    <h2>Urban fantasy across Europe</h2>
+    <p class="lead">Befriend ghosts in Paris, fly with sylphs in Berlin, hunt monsters in Germany, and hatch salamanders in Rome.</p>
+    <ul class="places">
+      <li><img src="img/catacombs.jpg" alt="Ghosts of the Catacombs, Parisian Ghosts 1" width="360" height="540" loading="lazy"><div><p class="where">Paris</p><h3>Parisian Ghosts</h3><p>I’m a ghost whisperer, not a catacomb crawler. But when you live in Paris, sometimes you end up being both. Now complete.</p><a class="quiet" href="https://janna-ruth.myshopify.com/collections/parisian-ghosts">The series</a></div></li>
+      <li><img src="img/wyld-tempest.jpg" alt="Wyld Witch Tempest, Wyld Lands Academy 2" width="360" height="540" loading="lazy"><div><p class="where">Wyld Lands Academy</p><h3>Wyld Witch Tempest</h3><p>New: book two. Born with a volatile storm inside her chest, and the most notorious witch terrorist of modern times for a father.</p><a class="quiet" href="https://janna-ruth.myshopify.com/products/wyld-witch-tempest-wyld-lands-academy-2">Get it</a></div></li>
+      <li><img src="img/drop-of-magic.jpg" alt="A Drop of Magic, Ashuan Greed book 1" width="360" height="540" loading="lazy"><div><p class="where">Ashuan Greed</p><h3>Ashuan</h3><p>Magic, demons and high school drama, with the wit of Buffy and the magic of Charmed. Book three won the Sir Julius Vogel Award for Best YA Novel.</p><a class="quiet" href="https://janna-ruth.myshopify.com/collections/ashuan">The series</a></div></li>
+      <li><img src="img/time-to-remember.jpg" alt="Time to Remember" width="360" height="576" loading="lazy"><div><p class="where">Ōtautahi</p><h3>Time to Remember</h3><p>When the Canterbury earthquakes destroyed their city, Natalie and her friends were ten. Too old to forget, too young to be heard. Until now.</p><a class="quiet" href="https://books2read.com/timetoremember">Find a copy</a></div></li>
+    </ul>
+  </div>
+</section>
+
+<section class="band about" id="janna">
+  <div class="wrap grid">
+    <img src="img/janna.jpg" alt="Janna Ruth smiling" width="520" height="614" loading="lazy">
+    <div>
+      <h2>Janna Ruth</h2>
+      <p class="lead">Once upon a time, I studied the plate boundaries of this world. Now I’m creating my own.</p>
+      <p>Born in Berlin, I now live in Wellington, or as I like to say, the other end of the world. I write, edit and publish in German and English, and I’ve translated more than seventy books into German. When I’m not writing, it’s aerial acrobatics, cake decorating and drawing.</p>
+      <p>And because I used to be a geologist, I check fantasy maps for rivers that flow uphill.</p>
+      <ul class="awards">
+        <li><b>Winner</b>Sir Julius Vogel Award 2024, Best YA Novel, A Spring of Magic</li>
+        <li><b>Shortlist</b>Sir Julius Vogel Award 2022, Best Novel, A Force of Nature</li>
+        <li><b>Winner</b>SERAPH 2018, Best Independent Title</li>
+      </ul>
+      <div class="signed">
+        <h3>Signed paperbacks in Aotearoa</h3>
+        <p>Met me at Armageddon in Auckland and missed a book? Signed paperbacks for readers in New Zealand.</p>
+        <a class="btn" href="https://janna-ruth.myshopify.com/collections/signed-books-nz-only">Signed copies (NZ)</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>A mockup made by Sparsh Saini for Janna Ruth. Not affiliated, not live. The covers and words are the author’s.</p>
+    <p><a class="quiet" href="#">Back to top</a></p>
+  </div>
+</footer>
+
+<script>
+(() => {
+  const hero = document.querySelector('.hero'), stage = hero.querySelector('.stage');
+  const cover = hero.querySelector('.cover'), slot = hero.querySelector('.slot');
+  const rika = cover.querySelector('.rika'), words = [...cover.querySelectorAll('.w')];
+  const open = hero.querySelector('.open'), low = hero.querySelector('.low'), sides = [...hero.querySelectorAll('.side')];
+  const ticket = document.querySelector('.ticket');
+  const F = { x: .55, y: .22 };                     // start: the storm over Berlin, Rika's face
+  const clamp = v => Math.min(1, Math.max(0, v));
+  const ease = t => t * t * (3 - 2 * t);
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let L = null;
+  const measure = () => {
+    cover.style.transform = 'none';
+    const s = stage.getBoundingClientRect(), r = slot.getBoundingClientRect();
+    const W = s.width, H = s.height, w = r.width, h = r.height;
+    cover.style.width = w + 'px'; cover.style.height = h + 'px';
+    const k0 = Math.max(H / (h * .5), W / w * 1.02);
+    let sx = W / 2 - F.x * w * k0, sy = 0;
+    sx = Math.min(0, Math.max(W - w * k0, sx));
+    L = { top: hero.getBoundingClientRect().top + scrollY, run: hero.offsetHeight - innerHeight, w, h, k0,
+          P0: [sx + F.x * w * k0, sy + F.y * h * k0], P1: [r.left - s.left + F.x * w, r.top - s.top + F.y * h], W };
+  };
+  // Each word rides in on the wind from the right: its own start, spin and moment.
+  const WIND = [[.5, 140, -14], [.555, 120, 10], [.61, 160, -8], [.665, 110, 6]];
+  const render = p => {
+    const z = ease(clamp((p - .05) / .55));
+    const k = Math.exp(Math.log(L.k0) * (1 - z));
+    const px = L.P0[0] + (L.P1[0] - L.P0[0]) * z, py = L.P0[1] + (L.P1[1] - L.P0[1]) * z;
+    cover.style.transform = `translate(${(px - F.x * L.w * k).toFixed(1)}px,${(py - F.y * L.h * k).toFixed(1)}px) scale(${k.toFixed(4)})`;
+    // Rika is nearer than the city, so she starts larger and steps back as we pull away.
+    rika.style.transform = `scale(${(1 + .22 * (1 - z)).toFixed(4)})`;
+    words.forEach((el, i) => {
+      const [at, dx, rot] = WIND[i], t = clamp((p - at) / .15), e = 1 - Math.pow(1 - t, 3);
+      el.style.opacity = clamp(t * 3).toFixed(3);
+      el.style.transform = `translate(${(dx * (1 - e)).toFixed(1)}%,${(-30 * (1 - e) * (1 - e)).toFixed(1)}%) rotate(${(rot * (1 - e)).toFixed(2)}deg)`;
+    });
+    const o = ease(clamp((p - .03) / .16));
+    open.style.opacity = (1 - o).toFixed(3); open.style.transform = `translateY(${(-o * 2.5).toFixed(2)}rem)`;
+    low.style.opacity = (1 - ease(clamp((p - .1) / .3))).toFixed(3);
+    sides.forEach((el, i) => {
+      const c = ease(clamp((p - .8 - i * .04) / .14));
+      el.style.opacity = c.toFixed(3); el.style.transform = `translateY(${((1 - c) * 1.2).toFixed(2)}rem)`;
+    });
+  };
+  let ticking = false;
+  const update = () => {
+    ticking = false;
+    if (!reduced) render(L.run > 0 ? clamp((scrollY - L.top) / L.run) : 1);
+    ticket.classList.toggle('on', scrollY > L.top + L.run + innerHeight * .5);
+  };
+  const relayout = () => { measure(); if (reduced) render(1); update(); };
+  if (reduced) document.documentElement.classList.add('still');
+  addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
+  addEventListener('resize', relayout);
+  document.fonts && document.fonts.ready.then(relayout);
+  relayout();
+})();
+</script>
+</body>
+</html>
